@@ -131,3 +131,27 @@ Will variable $myhost evaluate to $(hostname -s)?
 - **unset** daha önce ayarlanmış variable'ı siler
 - **export -n** unexport a variable without unsetting it
 - **unalias** to unset a alias
+
+- **id** --> show info about the currently logged-in user 
+- **id user01** username'i de ekleyerek yazdığında diğer userla ilgili bilgi alırsın 
+- **ls -l dosya_adi.txt** dosyanın sahibini çıktı verir
+- **ls -ld Documents** directory'nin sahibini verir
+- **ps** proses infosunu verir
+- **ps -a** terminaldeki bütün prosesleri verir 
+- **ps -u** prosesle ilgili olan userı verir 
+- **cat /etc/passwd/** yukarıdaki commandlerin çıktılarında aslında username'i alırız, UID'ye ihtiyacımız varsa bu kodu kullanırız çünkü dosyalarda burada tutulur
+- /bin/bash : The default shell program for this user that runs at login. Some accounts use the /sbin/nologin shell to disallow interactive logins with that account.
+- **cat /etc/group/** aslında belli dosyalara erişimini istediğimiz gruplar olabilir. bunları bu komutla bulabiliriz.
+- **_EXAMPLE_** Which item represents the program that provides the user's command-line prompt? _LOGIN SHELL_
+
+#### GAIN SUPERUSER ACCESS
+- **su - username** kullanıcı farklı bir user account'ına geçebilir. eğer normal bir user olarak switch etmek istiyorsan password girmelisin değiştireceğin user için. eğer _root_ kullanıcıysan şifre sormaz.
+- **su ya da su -** komutunu direkt kullanırsan, username vermeden --> direkt root kullanıcıya girmeye çalışırsın.
+- **sudo** komutuyla geçici olarak _root_ user priviligeları kazanırsın. authentication için halihazırda kullandığın hesabın şifresini girmen yeterlidir. ne başka bir userın, ne de root hesabın şifresine ihtiyaç duyarsın. 
+
+![image](https://user-images.githubusercontent.com/113854816/207081557-21168624-5ec3-4994-a5c7-28fe31f181dc.png)
+
+- **sudo** komutu kullanılan bütün komutları /var/log/secure'e kaydeder.
+- **sudo -i** _root_ accounta ulaşmak için kullanılır 
+- **sudo -s** run the shell without the interactive scripts
+![image](https://user-images.githubusercontent.com/113854816/207082372-914b1f12-2175-4f1f-a20c-5fddef734c72.png)
