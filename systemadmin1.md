@@ -108,3 +108,26 @@ thesis_chapter1.txt
 Will variable host evaluate to host?
 [user@host glob]$ echo 'Will variable $myhost evaluate to $(hostname -s)?'
 Will variable $myhost evaluate to $(hostname -s)?
+
+#### CREATE, VIEW AND EDIT TEXT FILES 
+![image](https://user-images.githubusercontent.com/113854816/207040621-e38a5684-b0da-480a-b90b-ac2aedaf88b5.png)
+
+- **pipelines:** sequence of one or more commands that are seperated by the vertical bar character. 
+- **ssh** remotte logins
+
+#### GET STARTED WITH VIM
+- The u key undoes the most recent edit.
+- The x key deletes a single character
+- The :w command writes (saves) the file and remains in command mode for more editing.
+- The :wq command writes (saves) the file and quits Vim.
+- The :q! command quits Vim, and discards all file changes since the last write.
+
+#### SHELL VARIABLE 
+- **set** list all shell variables that are currently set 
+- **set | less** less komudu bir sayfada okumana yardımcı olur.
+- variable expansion burada da uygulayabilirsin. 
+- **alias** sürekli kullandığın bir bash fonksiyonu varssa alias ile yazabilirsin.
+- ex: **alias hello= echo "Hello, this is a long string."
+- **unset** daha önce ayarlanmış variable'ı siler
+- **export -n** unexport a variable without unsetting it
+- **unalias** to unset a alias
