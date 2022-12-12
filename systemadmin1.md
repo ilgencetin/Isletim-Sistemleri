@@ -155,3 +155,29 @@ Will variable $myhost evaluate to $(hostname -s)?
 - **sudo -i** _root_ accounta ulaşmak için kullanılır 
 - **sudo -s** run the shell without the interactive scripts
 ![image](https://user-images.githubusercontent.com/113854816/207082372-914b1f12-2175-4f1f-a20c-5fddef734c72.png)
+
+- **_ŞİFREYİ EN SON ozlemozlem YAPTIN_**
+
+###### LOCAL USER 
+![image](https://user-images.githubusercontent.com/113854816/207103851-4c975921-8bf0-4af1-9199-e080698a7d5e.png)
+- **useradd** user ekleme
+- **userdel** user silme
+- **userdel -r** username'i /etc/passwd dahil olmak üzere her yerden siler. eğer userdel -r yapmadan kullanıcı yüklersen bu UID unassigned olarak kalır. üzerine bir kullanıcı atanırsa security problemi olur.
+
+**UID RANGES**
+- **UID 0** superuser (root) account UID 
+- **UID 1-200** system account UIDs statically assigned to system processes.
+- **UID 201-999** do not own files on system 
+- **UID 1000+** regular unprivigeled user accounts
+
+#### MANAGE LOCAL GROUP ACCOUNTS 
+- **groupadd** grup ekleme, eğer yeteri kadar bilgi verilmezse sıradaki uygun GID numarasından maksimum olanına iletir direkt. 
+- **groupadd -g 10000** bir GID numarası assign edersin
+- **groupadd -r** system groupları create eder
+- **groupmod** grup üzerinde değişiklik yapılmasını sağlar 
+- **groupmod -n groupyeniisim groupeskiisim** grubun ismini değiştirmeni sağlar.
+- **groupmod -g 20000 group2** yeni GID numarası vermeni sağlar 
+- **groupdel** grup siler
+- **usermod -g group01 user02** userın grubunu değiştirme
+- **usermod -aG grup01 user03** userı secondary grupa ekleme
+- **newgrp group1** geçici olarak grubunu değiştirmek
