@@ -48,3 +48,32 @@
 - The cd .. command uses the (..) hidden directory to move up one level to the parent directory, without needing to know the exact parent name. The other hidden directory (.) specifies the current directory on commands where the current location is either the source or destination argument, and avoids the need to type the directory's absolute path name.
 - 	Which command creates an empty file called helloworld.py in the user home directory, assuming that your current directory is /home? touch ~/helloworld.py
 - 	Which command changes the working directory to /tmp if the current working directory is /home/student? cd ../../tmp
+- 	**mkdir** creates one or more directories or subdirectories
+- If the directory exists, or a parent directory of the directory that you are trying to create does not exist, then the mkdir command fails and it displays an error. 
+- **mkdir -p** creates missing parent directory (ch1 ch2 ch3 üreteceksin ama tez başlığı altında, o zaman _mkdir -P tez/ch1 tez/ch2 tez/ch3/tez_
+- **cp** copies a file and creates a file either in the current directory or in a different specified directory
+- _cp commandi directory kopyalamaz, sadece file kopyalar, tez_chp1.tct kopyalar ama tez'i kopyalamaz._
+- **cp -r** directory kopyalarız 
+- . ya da .. da kullanılabilir.
+- **mv** dosyaların yerini değiştirir. mv değiştirmek istediğin file.txt değiştirilen isim.txt
+- **mv -v** dosyalarda ne değişiklik yapıldığını detaylı olarak gösterir. 
+- [user@host Documents]$ ls Thesis/Chapter1
+[user@host Documents]$
+[user@host Documents]$ mv -v thesis_chapter1.txt Thesis/Chapter1
+renamed 'thesis_chapter1.txt' -> 'Thesis/Chapter1/thesis_chapter1.txt'
+[user@host Documents]$ ls Thesis/Chapter1
+thesis_chapter1.txt
+[user@host Documents]$ ls -l
+-rw-r--r--. 1 user user 11431 Mar  7 14:39 thesis_chapter2_reviewed.txt
+...output omitted...
+- **rm** dosya siler.
+- **rm -r** directoryi siler 
+- **rm -i** dosyaları silmeden önce doğrulama ister.
+- **rm -f** dosyaları doğrulamadan forcelayarak direkt siler.
+- **rmdir** boş directoryleri silmek için kullanılır.
+- **ln** hard link oluşturmak için gerekli command, halihazırda bulunan bir file'ı point eder, commandin içine iki argüman yazmalısın: file'ın pathi ve hard link eklemek istediğin path
+- **ln -il** inode numberı ekler. eğer iki kısımın da inode numberı eşitse demdk ki filelar hard linklenmiştir ve aynı data contentini içeriyorlardır.
+- **df** hangi file systemlerinin ne içerdiğini gösterir. mounted on kısmından file system hiyerarşisini görebilirsin. 
+- _ln commandini kullanırken dosyaların aynı directory ya da subdirectory içerisinde olmaları gerekir. mounted on kısmından baktığında aynı directoryde değillerse ln kullanılamaz!!!_
+- **ln -s** sembolik hard link oluşturmanı sağlar. outputta lrwxrwxrwx kısmında l görüyorsan bu sembolik hard linktir.
+- **cd -P** update the current working directory by using the name of the actual directory
