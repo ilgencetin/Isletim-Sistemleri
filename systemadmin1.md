@@ -1,5 +1,50 @@
-
-  '''
-  [student@workstation ~]$ lab start cli-desktop
-  '''
+'[student@workstation ~]$ lab start cli-desktop'
   - workstation makinası üzerinde student kullanıcısısın. lab environmentın tüm gerekliliklerini sağladığından emin olma kodu.
+ - 'finish' command student şifresini student yapar.
+ - 'passwd' şifreyi başka bir şifreye değiştirmeni sağlar. 
+ - 55TurnK3y'e çevir şifreyi.
+ - whoami 
+ - date
+ - date +%R 
+ - date +%x
+ - file --> dosya aramana yardımcı olur
+ - etc 
+ - bin
+ - head --> görmek istediğin kısmın başını gösterir.
+ - tail -n3 --> görmek istediğin kısmın son 3 satırını gösterir
+ - cat -->  this command to create single or multiple files, view the contents of files, concatenate the contents from various files, and redirect contents of the file to a terminal or to files.
+ - taba bir kez basarsan tamamlar, iki kez basarsan öneri listesini çıkarır koda benzer.
+ - useradd --> create users on the system 
+ - \ birden çok commandi aynı lineda yazmak için kullanılır 
+ - > secondary prompt, default olarak gelen command ayırıcı. DİKKATLİ OLMALISIN, OUTPUT direction olarak sayılmamalı
+ - history --> önceden kullanılan commandler 
+ - !number --> önceki commandleri tekrar yazmadan expand eder 
+ - !string --> specified string için commandi expand eder.
+ - ![image](https://user-images.githubusercontent.com/113854816/206909579-4ea02f18-891e-4b02-9da9-c1506eeedab9.png)
+ - wc --> display the number of lines word and bytes
+ -  file-system directory contents:
+ -  Static content remains unchanged until explicitly edited or reconfigured.
+ -  Dynamic or variable content might be modified or appended by active processes
+ -  Persistent content remains after a reboot, such as configuration settings.
+ -  Runtime content from a process or from the system is deleted on reboot.
+
+![image](https://user-images.githubusercontent.com/113854816/206910060-dcde8443-1912-4452-82fc-97d27003fa62.png)
+
+- Boşluk karakteri linuxta file ismine dahil olabilir. command lineda boşluklar distinguish etmek için kullanılır, eğer fileda boşluk karakteri varsa ve öyle yazılırsa --> to avoid this mistake, surround such file names in quotation marks so that the shell interprets the name as a single argument. 
+- _absolute path of a file_ /path_name/ 
+- örnek verirsek: /var/log/messages
+- _relative path_ Relative path names follow a simple rule: a path name with anything other than a forward slash as the first character is a relative path name. For example, relative to the /var directory, the message log file is log/messages.
+- _relative path'te working directory üzerinden lokasyon gösterilir._
+- pwd --> working directorydeki full path name'i gösterir.
+- ls --> lists directory contents for the specified directory
+- ls -l --> long listing format 
+- ls -a --> all files, including hidden ones
+- ls -R recursive to include the contents of all subdirectories
+- cd --> change shell's current working directory. 
+- prompt displays ~ --> when your current working director is your home directory.
+- touch --> updates the time stamp of a file to the current date and time without otherwise modifying it, creating empty files
+- file names starts with (.) dot --> hidden files 
+- tilde (~) special character in combination with other commands to facilitate the interaction with the home directory.
+- The cd .. command uses the (..) hidden directory to move up one level to the parent directory, without needing to know the exact parent name. The other hidden directory (.) specifies the current directory on commands where the current location is either the source or destination argument, and avoids the need to type the directory's absolute path name.
+- 	Which command creates an empty file called helloworld.py in the user home directory, assuming that your current directory is /home? touch ~/helloworld.py
+- 	Which command changes the working directory to /tmp if the current working directory is /home/student? cd ../../tmp
