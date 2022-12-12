@@ -77,3 +77,34 @@ thesis_chapter1.txt
 - _ln commandini kullanırken dosyaların aynı directory ya da subdirectory içerisinde olmaları gerekir. mounted on kısmından baktığında aynı directoryde değillerse ln kullanılamaz!!!_
 - **ln -s** sembolik hard link oluşturmanı sağlar. outputta lrwxrwxrwx kısmında l görüyorsan bu sembolik hard linktir.
 - **cd -P** update the current working directory by using the name of the actual directory
+
+##### PATTERN MATCHING 
+![image](https://user-images.githubusercontent.com/113854816/206994516-8d27d324-6f9b-4de9-bcff-ed504a02e81b.png)
+- **ls a*** ayla başlayan kelimeleri matchler 
+- **ls *b** son harfi b olan kelimeleri matchler
+- **ls *a*** a barındıran kelimeleri matchler 
+- **ls [ac]*** a veya cyle başlayan bütün kelimeleri matchler 
+- **ls [!b]*** ilk harfi b olmayan kelimeleri matchler
+- **ls ????** 4 harf barındıran kelimeleri matchler 
+- The tilde character (~), matches the current user's home directory. If it starts with a string of characters other than a slash (/), then the shell interprets the string up to that slash as a user name, if one matches, and replaces the string with the absolute path to that user's home directory. If no user name matches, then the shell uses an actual tilde followed by the string of characters.
+- **echo** display the value of the tilde charachter 
+###### BRACE EXPANSION 
+- **echo {Sunday, Monday, Tuesday, Wednesday,}.log** output ayrı ayrı loglu yazılmış hali olarak çıkar.
+- **echo file{a{1,2},b,c}.txt** output --> filea1.txt filea2.txt fileb.txt filec.txt
+- practical use: **mkdir ../RHEL{7,8,9} ls ../RHEL***
+###### VARIABLE EXPANSION 
+- **USERNAME=operator**
+- **VARIABLENAME=value**
+- **echo $USERNAME**
+- _yanlış yazımı elimine etmek için ${USERNAME} şeklinde de yazabilirsin._
+- Variable names can contain only letters (uppercase and lowercase), numbers, and underscores. Variable names are case-sensitive and cannot start with a number.
+###### COMMAND SUBSTITUTION 
+- **echo Today is $(date +%A)
+- _eğer birlikte yazmak istiyorsan dolar işaretini koyman gerekiyor._
+- _\ kullandığın zaman direkt yazılan şeyi çıktı etmiş olursun. \$HOME yazdığın zaman expand edilmiş bilgiyi değil direkt \$HOME çıktı edilir._
+- Single quotation marks stop all shell expansion. 
+- Double quotation marks stop most shell expansion.
+- [user@host glob]$ echo "Will variable $myhost evaluate to $(hostname -s)?"
+Will variable host evaluate to host?
+[user@host glob]$ echo 'Will variable $myhost evaluate to $(hostname -s)?'
+Will variable $myhost evaluate to $(hostname -s)?
