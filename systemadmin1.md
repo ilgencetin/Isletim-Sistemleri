@@ -181,3 +181,7 @@ Will variable $myhost evaluate to $(hostname -s)?
 - **usermod -g group01 user02** userın grubunu değiştirme
 - **usermod -aG grup01 user03** userı secondary grupa ekleme
 - **newgrp group1** geçici olarak grubunu değiştirmek
+
+
+#### MANAGE USER PASSWORDS
+- **/etc/shadow** encrypted passwords list
