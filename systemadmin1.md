@@ -206,3 +206,33 @@ Will variable $myhost evaluate to $(hostname -s)?
 - eğer bir kullanıcı kesin bir tarihte işten çıkacaksa kod: **_usermod -L -e 2022-08-14 cloudadmin10_**
 - **usermod -U** userın tekrar accounta erişimini engelle
 - **usermod -s /sbin/nologin newapp** newappe erişimini engeller. 
+
+#### PERMISSIONS 
+- user permission
+- group permission 
+- other permissions
+- **permission types: _read, write, execute (files can be executed as commands_)
+- **ls -l** shows detailed info about permissions and ownership 
+- **ls -ld/home** directory hakkında detailed infoyu gösterir. contenti göstermez!!
+- **-** regular file
+- **d** directory 
+- **l** symbolic link 
+- **c** character device file
+- **b** block device file 
+- **p** named pipe file
+- **s** local socket file 
+- **rwx _string_** set has all permissions: read, write, execute
+- **-** means that no permission given 
+- **chmod** modify file and directory permissions **chmod Who/What/Which file|directory**
+- **u _user_, g _group_, o _other_ a _all** 
+- **+ _add_, - _remove_, = _set exactly_**
+- **r _read_, w _write_, x _execute_, X _special execute_**
+- execute permissions for everyone: [user@host ~]$ chmod a+x myscript.sh
+- Remove read and write permission for group and other: [user@host ~]$ chmod go-rw document.pdf
+- **-R** kullanıldığı zaman permissions on the files in an enitre directory _tree_. : [user@host ~]$ chmod -R g+rwx /home/user/myfolder
+- **Octal method: chmod ### file/directory** ### digiti temsil eder.
+- _NOTE:_ Start with 0.If you want to add read permissions for this access level, then add 4. If you want to add write permissions, then add 2. If you want to add execute permissions, then add 1.
+- **chown** changes owner of the file/directory tree depending on -R 
+- **chowm :admins Pictures** :admins yeni yetkileri admins grubuna verir. 
+- **visitor:admins** eklediğinde admins grubu içindeki visitor userına verilir ownerlık.
+- 
