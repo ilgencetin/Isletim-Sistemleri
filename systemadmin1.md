@@ -243,4 +243,23 @@ Will variable $myhost evaluate to $(hostname -s)?
 
 ###### DEFAULT PERMISSIONS 
 - **umask** is an octal bitmask that clears the permissions of new files and directories that a process creates.
-- 
+
+- **_NOTE_**
+- File ownership permissions have three categories. A file is owned by a user, a single group, and other users. The most specific permission applies. User permissions override group permissions and group permissions override other permissions.
+- The ls command -l option expands the file listing to include both the file permissions and ownership.
+- The chmod command changes file permissions from the command line.
+- The chmod command can use one of two methods to represent permissions: symbolic or octal.
+- The chown command changes file ownership. The chown command -R option recursively changes the ownership of a directory tree.
+- The umask command without arguments displays the current umask value of the shell. Every process on the system has a umask. The default umask values for Bash are defined in the /etc/profile and /etc/bashrc files.
+- The suid, sgid, and sticky special permissions provide additional access-related features to files.
+
+
+#### MANAGE PROCESSES 
+![image](https://user-images.githubusercontent.com/113854816/207246080-95cb084b-7ddd-43a0-a6af-60bc94a49c7c.png)
+
+- **top** command S column --> shows the state of each process
+- **ps** command STAT --> shows the state of each process
+- **ps** used for listing detailed info for current processes. 
+- **stdout** controlling terminal 
+- **ps aux** displays all processes including processes without a controlling terminal
+
