@@ -185,3 +185,24 @@ Will variable $myhost evaluate to $(hostname -s)?
 
 #### MANAGE USER PASSWORDS
 - **/etc/shadow** encrypted passwords list
+- user03:$6$CSsXsd3rwghsdfarf:17933:0:99999:7:2:18113:
+![image](https://user-images.githubusercontent.com/113854816/207117007-0e98d97b-7d10-4eb9-9d38-42b5fa7a0d5d.png)
+
+- $6$CSsXcYG1L/4ZfHr/$2W6evvJahUfzfHpc9X.45Jc6H30E
+- 6 --> SHA-512 hashing algorithm 
+- 5 --> SHA-256
+- 1 --> MD5
+- sXcYG1L/4ZfHr: The salt in use to encrypt the password; originally chosen at random.
+- 2W6evvJahUfzfHpc9X.45Jc6H30E: The encrypted hash of the user's password; combining the salt and the unencrypted password and then encrypting to generate the password hash.
+- **chage** implementation of password aging policy
+- **chage -m 0 -M 90 -W 7 -I 14 sysadmin1**
+- -m minimum gün -M maksimum gün
+- -W warning period 
+- -I inaktif period 
+- -d password değiştirme zorunluluğu
+- **chage -E** change expiration date 
+- **chage -l** display the password aging policy 
+- **usermod -L** locks user account and the user cannot log into the system
+- eğer bir kullanıcı kesin bir tarihte işten çıkacaksa kod: **_usermod -L -e 2022-08-14 cloudadmin10_**
+- **usermod -U** userın tekrar accounta erişimini engelle
+- **usermod -s /sbin/nologin newapp** newappe erişimini engeller. 
