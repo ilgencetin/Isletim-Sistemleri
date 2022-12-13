@@ -262,4 +262,32 @@ Will variable $myhost evaluate to $(hostname -s)?
 - **ps** used for listing detailed info for current processes. 
 - **stdout** controlling terminal 
 - **ps aux** displays all processes including processes without a controlling terminal
+- **ps lax** provides more detail and displays faster by avoiding username lookups. 
+- **ps -ef** display all processes 
+- **exiting or defunct** zombie processes are listed
+- **ps --forest** display the processes in a tree format so you can view relationships between parent and child processes.
+- **ps -O and --sort** sorts the output.
+- **&** any command or pipeline can be started in the background by appending
+- **sleep** 
+- **|** the PID of the last command in the pipeline is displayed. 
+- **jobs** display the list of jobs for the shell's session 
+- **fg** bring a backgorund job the foreground. Use the the (%jobNumber) format to specify the process to foreground.
+- **Ctrl+Z** send a foreground process to the background
+- **ps j** displays info about jobs 
+- **bg** start running the suspended process with **%id**
+
+###### KILL PROCESSES
+![image](https://user-images.githubusercontent.com/113854816/207249546-68dd4d6c-82fa-471a-b4fb-81a471027e0a.png)
+
+- **kill -l** available signalleri ortaya çıkarır 
+- **kill ID** prosesi kill
+- **killall** can signal multiple processes 
+- **pkill** signal one or more processes that match selection criteria.
+- **w** list user logins 
+- **pgrep** identify the PID numbers
+- **uptime** displat the current load average
+- **lscpu** the number of CPUs that are present on a system 
+- **top** displays a dynamic view od the system's processes and a summary header followed by a process or thread list 
+
+![image](https://user-images.githubusercontent.com/113854816/207251029-c9246377-890e-4fb4-86bb-85603ccd318a.png)
 
