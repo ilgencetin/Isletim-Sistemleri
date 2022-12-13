@@ -211,6 +211,7 @@ Will variable $myhost evaluate to $(hostname -s)?
 - user permission
 - group permission 
 - other permissions
+- special permissions
 - **permission types: _read, write, execute (files can be executed as commands_)
 - **ls -l** shows detailed info about permissions and ownership 
 - **ls -ld/home** directory hakkında detailed infoyu gösterir. contenti göstermez!!
@@ -235,4 +236,11 @@ Will variable $myhost evaluate to $(hostname -s)?
 - **chown** changes owner of the file/directory tree depending on -R 
 - **chowm :admins Pictures** :admins yeni yetkileri admins grubuna verir. 
 - **visitor:admins** eklediğinde admins grubu içindeki visitor userına verilir ownerlık.
+- **SPECIAL PERMISSIONS:**
+- **suid: u+s**
+- **sgid: g+s**
+- **sticky: o+t**
+
+###### DEFAULT PERMISSIONS 
+- **umask** is an octal bitmask that clears the permissions of new files and directories that a process creates.
 - 
